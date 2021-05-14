@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bUm-YX-HYX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="GJu-Ts-vNl">
+            <objects>
+                <navigationController id="bUm-YX-HYX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CmJ-kU-hcP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lE6-g2-LtL" kind="relationship" relationship="rootViewController" id="i9C-Lr-HfW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXz-BR-Ueq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-926" y="0.0"/>
+        </scene>
+        <!--Menus-->
+        <scene sceneID="7T2-Kc-foe">
+            <objects>
+                <viewController id="lE6-g2-LtL" customClass="ViewController" customModule="MenuPersonalizado" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Otg-1f-4T8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSQ-71-8qP">
+                                <rect key="frame" x="181" y="433" width="52" height="30"/>
+                                <state key="normal" title="Menu 2"/>
+                                <connections>
+                                    <action selector="showNextMenu:" destination="lE6-g2-LtL" eventType="touchUpInside" id="HLt-eX-ua5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q2d-RE-sU8"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bSQ-71-8qP" firstAttribute="centerY" secondItem="Otg-1f-4T8" secondAttribute="centerY" id="eSa-OX-Dky"/>
+                            <constraint firstItem="bSQ-71-8qP" firstAttribute="centerX" secondItem="Otg-1f-4T8" secondAttribute="centerX" id="iUm-Hz-6oI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menus" id="S7i-1m-4TR">
+                        <barButtonItem key="leftBarButtonItem" title="menu" image="list.bullet" catalog="system" id="hE7-LU-4Ag">
+                            <connections>
+                                <action selector="openMenu:" destination="lE6-g2-LtL" id="7FP-6f-z3O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="vistaPrincipal" destination="Otg-1f-4T8" id="QYR-GM-q3X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDe-jZ-LDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+    </resources>
+</document>
